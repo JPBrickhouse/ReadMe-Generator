@@ -6,14 +6,15 @@ const inquirer = require("inquirer");
 
 
 // array of questions for user
-const questions = [
+const nonRecursiveQuestions = [
     {
         type: "input",
         name: "projectTitle",
-        message: "What is the Title of this project?"
+        message: "What is the Title of this project?",
+        type: "string"
     }
+]
 
-];
 
 // function to write README file
 function writeReadMe(data) {
@@ -53,21 +54,22 @@ function writeReadMe(data) {
 
 }
 
+
 // function to initialize program
 async function init() {
     try {
 
-        const answers = await inquirer.prompt(questions);
+        const answers = await inquirer.prompt(nonRecursiveQuestions);
 
         console.log(answers);
 
-    //     const readMeContent = writeReadMe(answers);
+        // const readMeContent = writeReadMe(answers);
 
-    //     await writeFileAsync("README.md", readMeContent);
+        // await writeFileAsync("README.md", readMeContent);
 
-    //     console.log("Successfully wrote to README.md")
+        // console.log("Successfully wrote to README.md")
     }
-    catch(err) {
+    catch (err) {
         console.log(err);
     }
 }
