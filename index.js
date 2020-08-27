@@ -14,6 +14,12 @@ const nonRecursiveQuestions = [
         type: "string"
     },
     {
+        type: "input",
+        name: "description",
+        message: "Describe this project with a short, succint summary:",
+        type: "string"
+    },
+    {
         type: "list",
         name: "license",
         message: "Choose your license:",
@@ -69,6 +75,9 @@ function writeReadMe(data) {
     // TITLE
 
 
+    // License Badge
+
+
     // DESCRIPTION
 
 
@@ -113,9 +122,29 @@ function writeReadMe(data) {
 async function init() {
     try {
 
+        // Running inquirer.prompt on the nonRecursiveQuestions array of objects
+        // Await the results and then store as the constant answers
         const answers = await inquirer.prompt(nonRecursiveQuestions);
 
+        // Creating a constant, corresponding to the licenseSelected by the user
+        const licenseSelected = answers.license;
+
+        // Initializing empty variables for use momentarily
+        var licenseURL = ""
+        var badge = ""
+
+        // Using forEach go into licenseInfo, an array of objects
+        // Find the name that matches, and then store the corresponding badge and licenseURL
+        licenseInfo.forEach(object => {
+            if (object.name === licenseSelected) {
+                licenseURL = object.licenseURL;
+                badge = object.badge;
+            }
+        })
+
+
         console.log(answers);
+
 
         // const readMeContent = writeReadMe(answers);
 
