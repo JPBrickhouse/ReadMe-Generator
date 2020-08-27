@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
-// const fs = require("fs");
-// const util = require("util");
+const fs = require("fs");
+const util = require("util");
 
-// const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 
 // array of questions for user
@@ -178,11 +178,11 @@ async function init() {
 
         // Running the writeReadMe function and passing the answers object
         const readMeContent = writeReadMeContent(answers);
-        
 
-        // await writeFileAsync("GeneratedREADME.md", readMeContent);
+        // Writing the GeneratedREADME file
+        await writeFileAsync("GeneratedREADME.md", readMeContent);
 
-        // console.log("Successfully wrote to GeneratedREADME.md")
+        console.log("Successfully wrote to GeneratedREADME.md")
     }
     catch (err) {
         console.log(err);
