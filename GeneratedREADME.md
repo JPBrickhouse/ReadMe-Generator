@@ -1,38 +1,37 @@
 
-    # Title
+# Title
 
-    [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
+[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
 
-    ## DESCRIPTION
-    Summmary summary summary
+## DESCRIPTION
+Summary summary summary
 
-    ## TABLE OF CONTENTS
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
+## TABLE OF CONTENTS
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
     
-    ## INSTALLATION
-    Installation steps
+## INSTALLATION
+Installation steps 1, 2, 3
 
-    ## USAGE
-    Instructions for use!
+## USAGE
+Succinct instructions for thee
 
-    ## LICENSE
-    License: WTFPL
-    [http://www.wtfpl.net/about/](http://www.wtfpl.net/about/)
+## LICENSE
+License: WTFPL<br>
+[http://www.wtfpl.net/about/](http://www.wtfpl.net/about/)
 
-    ## CONTRIBUTING
-    undefined
+## CONTRIBUTING
+Josh, Mickey, Minnie, Goofy, Donald
 
-    ## TESTS
-    undefined
+## TESTS
+Test test 1, 2, 3
 
-    ## QUESTIONS
-    - Feel free to visit the following GitHub for more information:
-    [https://github.com/JPBrickhouse](https://github.com/JPBrickhouse)
-    - For further questions, please reach out to the following email address:
-    [jbrickhouse777@gmail.com](jbrickhouse777@gmail.com)
-    
+## QUESTIONS
+- Feel free to visit the following GitHub for more information:
+[https://github.com/JPBrickhouse](https://github.com/JPBrickhouse)
+- For further questions, please reach out to the following email address:
+[JBrickhouse777@gmail.com](JBrickhouse777@gmail.com)

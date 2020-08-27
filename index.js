@@ -108,43 +108,43 @@ const licenseInfo = [
 function writeReadMeContent(answers) {
 
     return `
-    # ${answers.projectTitle}
+# ${answers.projectTitle}
 
-    ${answers.badge}
+${answers.badge}
 
-    ## DESCRIPTION
-    ${answers.description}
+## DESCRIPTION
+${answers.description}
 
-    ## TABLE OF CONTENTS
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
+## TABLE OF CONTENTS
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
     
-    ## INSTALLATION
-    ${answers.installation}
+## INSTALLATION
+${answers.installation}
 
-    ## USAGE
-    ${answers.usage}
+## USAGE
+${answers.usage}
 
-    ## LICENSE
-    License: ${answers.license}
-    ${answers.licenseURL}
+## LICENSE
+License: ${answers.license}<br>
+${answers.licenseURL}
 
-    ## CONTRIBUTING
-    ${answers.contributing}
+## CONTRIBUTING
+${answers.contributors}
 
-    ## TESTS
-    ${answers.test}
+## TESTS
+${answers.tests}
 
-    ## QUESTIONS
-    - Feel free to visit the following GitHub for more information:
-    [https://github.com/${answers.githubUsername}](https://github.com/${answers.githubUsername})
-    - For further questions, please reach out to the following email address:
-    [${answers.emailAddress}](${answers.emailAddress})
-    `
+## QUESTIONS
+- Feel free to visit the following GitHub for more information:
+[https://github.com/${answers.githubUsername}](https://github.com/${answers.githubUsername})
+- For further questions, please reach out to the following email address:
+[${answers.emailAddress}](${answers.emailAddress})
+`
 }
 
 
