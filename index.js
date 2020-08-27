@@ -1,11 +1,12 @@
+// Importing necessary packages in order to successfully run this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
+// Creating a function that asynchronously writes the readme file
 const writeFileAsync = util.promisify(fs.writeFile);
 
-
-// array of questions for user
+// This array of objects contains questions that will be asked to the user
 const questions = [
     {
         type: "input",
@@ -70,6 +71,9 @@ const questions = [
 
 ]
 
+// This array of objects stores additional information corresponding to the licenses.
+// These URLs for the license website and badges are formatted in a manner that
+// will properly display them in markdown.
 const licenseInfo = [
     {
         name: "Apache License 2.0",
@@ -105,6 +109,7 @@ const licenseInfo = [
 
 
 // function to write README file
+// All of the content located between the `` characters gets returned
 function writeReadMeContent(answers) {
 
     return `
@@ -151,7 +156,6 @@ ${answers.tests}
 // function to initialize program
 async function init() {
     try {
-
         // Running inquirer.prompt on the questions array of objects
         // Await the results and then store as the constant answers
         const answers = await inquirer.prompt(questions);
@@ -177,14 +181,15 @@ async function init() {
         answers.badge = badgeVariable;
 
         // Running the writeReadMe function and passing the answers object
+        // The returned content is stored as readMeContent
         const readMeContent = writeReadMeContent(answers);
 
-        // Writing the GeneratedREADME file
+        // Writing the GeneratedREADME file and console logging upon success
         await writeFileAsync("GeneratedREADME.md", readMeContent);
-
         console.log("Successfully wrote to GeneratedREADME.md")
     }
     catch (err) {
+        // catching and console logging an error
         console.log(err);
     }
 }
