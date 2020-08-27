@@ -6,17 +6,29 @@ const inquirer = require("inquirer");
 
 
 // array of questions for user
-const nonRecursiveQuestions = [
+const questions = [
     {
         type: "input",
         name: "projectTitle",
-        message: "What is the Title of this project?",
+        message: "What is the title of this project?",
         type: "string"
     },
     {
         type: "input",
         name: "description",
         message: "Describe this project with a short, succint summary:",
+        type: "string"
+    },
+    {
+        type: "input",
+        name: "installation",
+        message: "What are the steps required to install your project?",
+        type: "string"
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "Provide succinct instructions and examples for using this application:",
         type: "string"
     },
     {
@@ -31,7 +43,31 @@ const nonRecursiveQuestions = [
             "MIT License",
             "WTFPL"
         ]
+    },
+    {
+        type: "input",
+        name: "contributors",
+        message: "Who contributed to this project?",
+        type: "string"
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Please describe (succinctly) any tests for this application:"
+    },
+    {
+        type: "input",
+        name: "githubUsername",
+        message: "Please enter your GitHub username (not the url, just the username):",
+        type: "string"
+    },
+    {
+        type: "input",
+        name: "emailAddress",
+        message: "Please enter your email address:",
+        type: "string"
     }
+
 ]
 
 const licenseInfo = [
@@ -100,7 +136,7 @@ function writeReadMe(data) {
 
 
 
-    // LICENSE
+    // LICENSE (URL)
 
 
 
@@ -113,7 +149,10 @@ function writeReadMe(data) {
 
 
     // QUESTIONS
-
+    // "Feel free to visit the following GitHub for more information"
+    // GitHub user name turned into a link
+    // "For further questions, please reach out to the following email address:"
+    // Email address with a mailto link
 
 }
 
@@ -122,29 +161,33 @@ function writeReadMe(data) {
 async function init() {
     try {
 
-        // Running inquirer.prompt on the nonRecursiveQuestions array of objects
+        // Running inquirer.prompt on the questions array of objects
         // Await the results and then store as the constant answers
-        const answers = await inquirer.prompt(nonRecursiveQuestions);
+        const answers = await inquirer.prompt(questions);
 
         // Creating a constant, corresponding to the licenseSelected by the user
         const licenseSelected = answers.license;
 
         // Initializing empty variables for use momentarily
-        var licenseURL = ""
-        var badge = ""
+        var licenseURLvariable = ""
+        var badgeVariable = ""
 
         // Using forEach go into licenseInfo, an array of objects
         // Find the name that matches, and then store the corresponding badge and licenseURL
         licenseInfo.forEach(object => {
             if (object.name === licenseSelected) {
-                licenseURL = object.licenseURL;
-                badge = object.badge;
+                licenseURLvariable = object.licenseURL;
+                badgeVariable = object.badge;
             }
         })
 
+        // Adding keys and values to the answers object
+        answers.licenseURL = licenseURLvariable;
+        answers.badge = badgeVariable;
+
+
 
         console.log(answers);
-
 
         // const readMeContent = writeReadMe(answers);
 
