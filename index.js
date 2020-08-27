@@ -105,55 +105,46 @@ const licenseInfo = [
 
 
 // function to write README file
-function writeReadMe(data) {
+function writeReadMeContent(answers) {
 
+    return `
+    # ${answers.projectTitle}
 
-    // TITLE
+    ${answers.badge}
 
+    ## DESCRIPTION
+    ${answers.description}
 
-    // License Badge
+    ## TABLE OF CONTENTS
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [Questions](#questions)
+    
+    ## INSTALLATION
+    ${answers.installation}
 
+    ## USAGE
+    ${answers.usage}
 
-    // DESCRIPTION
+    ## LICENSE
+    License: ${answers.license}
+    ${answers.licenseURL}
 
+    ## CONTRIBUTING
+    ${answers.contributing}
 
-    // TABLE OF CONTENTS
+    ## TESTS
+    ${answers.test}
 
-    // UNCOMMENT - This content will be in quotes as part of the overall assembled ReadMe
-    // * [Installation](#installation)
-    // * [Usage](#usage)
-    // * [License](#license)
-    // * [Contributing](#contributing)
-    // * [Tests](#tests)
-    // * [Questions](#questions)
-
-
-    // INSTALLATION
-
-
-
-    // USAGE
-
-
-
-    // LICENSE (URL)
-
-
-
-    // CONTRIBUTING
-
-
-
-    // TESTS
-
-
-
-    // QUESTIONS
-    // "Feel free to visit the following GitHub for more information"
-    // GitHub user name turned into a link
-    // "For further questions, please reach out to the following email address:"
-    // Email address with a mailto link
-
+    ## QUESTIONS
+    - Feel free to visit the following GitHub for more information:
+    [https://github.com/${answers.githubUsername}](https://github.com/${answers.githubUsername})
+    - For further questions, please reach out to the following email address:
+    [${answers.emailAddress}](${answers.emailAddress})
+    `
 }
 
 
@@ -185,15 +176,13 @@ async function init() {
         answers.licenseURL = licenseURLvariable;
         answers.badge = badgeVariable;
 
+        // Running the writeReadMe function and passing the answers object
+        const readMeContent = writeReadMeContent(answers);
+        
 
+        // await writeFileAsync("GeneratedREADME.md", readMeContent);
 
-        console.log(answers);
-
-        // const readMeContent = writeReadMe(answers);
-
-        // await writeFileAsync("README.md", readMeContent);
-
-        // console.log("Successfully wrote to README.md")
+        // console.log("Successfully wrote to GeneratedREADME.md")
     }
     catch (err) {
         console.log(err);
