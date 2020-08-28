@@ -1,7 +1,7 @@
 
 # Title
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## DESCRIPTION
 Summary
@@ -15,17 +15,17 @@ Summary
 * [Questions](#questions)
     
 ## INSTALLATION
-Install
+Install Steps
 
 ## USAGE
-Instructions
+123
 
 ## LICENSE
-License: Apache License 2.0<br>
-[https://opensource.org/licenses/Apache-2.0](https://opensource.org/licenses/Apache-2.0)
+License: MIT License<br>
+[https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
 
 ## CONTRIBUTING
-Josh, Mickey, Minnie
+Mickey, Minnie, Donald, Goofy, Pluto
 
 ## TESTS
 Tests
@@ -34,4 +34,4 @@ Tests
 - Feel free to visit the following GitHub for more information:
 [https://github.com/Username](https://github.com/Username)
 - For further questions, please reach out to the following email address:
-[abc@gmail.com](abc@gmail.com)
+[Email@email.com](Email@email.com)
