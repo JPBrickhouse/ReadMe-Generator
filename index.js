@@ -66,7 +66,16 @@ const questions = [
         type: "input",
         name: "emailAddress",
         message: "Please enter your email address:",
-        type: "string"
+        // Validation code sourced from the following: https://gist.github.com/Amitabh-K/ae073eea3d5207efaddffde19b1618e8
+        validate: function (email) {
+            var valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+            if (valid) {
+                return true;
+            } else {
+                console.log("\nPlease enter a valid email")
+                return false;
+            }
+        }
     }
 
 ]
