@@ -15,7 +15,7 @@ Summary
 * [Questions](#questions)
     
 ## INSTALLATION
-Install Steps
+Steps
 
 ## USAGE
 123
@@ -28,7 +28,7 @@ License: MIT License<br>
 Mickey, Minnie, Donald, Goofy, Pluto
 
 ## TESTS
-Tests
+Test 456
 
 ## QUESTIONS
 - Feel free to visit the following GitHub for more information:

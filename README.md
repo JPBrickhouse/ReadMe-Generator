@@ -54,8 +54,7 @@ License: MIT License<br>
 [https://github.com/JPBrickhouse](https://github.com/JPBrickhouse)
 
 ## TESTS
-Link to video showing successfully deployed application:
-
+[Video](https://drive.google.com/file/d/1T4BAHJWO7O7tyBl3PXTPLFTVBbfBRNIP/) showing successfully deployed application: [https://drive.google.com/file/d/1T4BAHJWO7O7tyBl3PXTPLFTVBbfBRNIP/](https://drive.google.com/file/d/1T4BAHJWO7O7tyBl3PXTPLFTVBbfBRNIP/)
 
 ## QUESTIONS
 - Feel free to visit the following GitHub for more information:
